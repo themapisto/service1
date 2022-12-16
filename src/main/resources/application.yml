@@ -1,0 +1,21 @@
+server:
+  port: 8015
+
+spring:
+  application:
+    name: service1
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true # 유레카 서비스에 (자신을) 등록 여부
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://eureka.taskoo.net/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

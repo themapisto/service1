@@ -1,9 +1,8 @@
+# resttemplate 테스트 시행하는 프로젝트 입니다.
+
 ![img.png](img.png)
 
-# service1
 
-"resttemplate, openFeign 관련한 테스트를 시행하는 프로젝트입니다."
-- https://themapisto.tistory.com/177
 
 ### Resttemplate API CALL
 
@@ -11,7 +10,7 @@
     - url : postman  
   
 - ("/rest/test2")
-    - url : client.taskoo.net/services
+    - url : client.taskoo.net/client
 
 ### Jenkinsfile, Dockerfile 
 - kubernetes 배포 로직 구축 예정

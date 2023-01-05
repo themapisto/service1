@@ -45,7 +45,7 @@ public class RestTemplateTestService {
         HttpEntity<?> entity = new HttpEntity<>(header);
 
 
-        ResponseEntity<?> resultMap = restTemplate.exchange("http://localhost:8012/services", HttpMethod.POST,entity , Object.class);
+        ResponseEntity<?> resultMap = restTemplate.exchange("http://client.taskoo.net/client", HttpMethod.GET,entity , Object.class);
         result.put("statusCode", resultMap.getStatusCodeValue()); //http status code를 확인
         result.put("header", resultMap.getHeaders()); //헤더 정보 확인
         result.put("body", resultMap.getBody()); //실제 데이터 정보 확인

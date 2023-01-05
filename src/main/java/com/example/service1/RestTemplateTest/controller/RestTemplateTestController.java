@@ -21,7 +21,7 @@ public class RestTemplateTestController {
     }
     @RequestMapping("/rest/test2")
     public ResponseEntity<?> restTemplateTest2() throws JsonProcessingException {
-        System.out.println("localhost:8012로 api 요청을 보냈습니다.");
+        System.out.println("client.taskoo.net/client로 api 요청을 보냈습니다.");
         return ResponseEntity.ok(restTemplateTestService.callPostExternalServer2());
     }
 }

@@ -3,8 +3,9 @@ node {
   stage('========== Clone repository ==========') {
     checkout scm
 }
+
 stage('Gradle Build') {
-  steps {
+  {
     sh 'gradle clean build -x test -b build-server.gradle'
   }
 }

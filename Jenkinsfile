@@ -4,11 +4,11 @@ node {
     checkout scm
 }
 
-stage('Gradle Build') {
+stage('Gradle Build')
   {
     sh 'gradle clean build -x test -b build-server.gradle'
   }
-}
+
 
   stage('========== Build image ==========') {
     app = docker.build("tanzu/${env.IMAGE_NAME}")

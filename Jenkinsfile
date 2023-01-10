@@ -6,7 +6,7 @@ node {
 
 stage('Gradle Build')
   {
-    sh ' ./gradlew api:clean api:build && ./gradlew chat:clean chat:build'
+    sh ' ./gradlew '
   }
 
 

@@ -6,7 +6,7 @@ node {
 
 stage('Gradle Build')
   {
-    sh 'gradle clean build -x test -b build-server.gradle'
+    sh ' ./gradlew api:clean api:build && ./gradlew chat:clean chat:build'
   }
 
 

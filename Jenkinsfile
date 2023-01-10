@@ -3,16 +3,12 @@ node {
   stage('========== Clone repository ==========') {
     checkout scm
 }
- stage('Ready'){
-        sh "echo 'Ready to build'"
-        mvnHome = tool 'Maven 3.8.6'
-    }
+stage('Gradle Build') {
+  steps {
+    sh 'gradle clean build -x test -b build-server.gradle'
+  }
+}
 
-    // mvn 빌드로 jar파일을 생성하는 stage
-    stage('Build'){
-        sh "echo 'Build Spring Boot Jar'"
-        sh "'${mvnHome}/bin/mvn' clean package"
-    }
   stage('========== Build image ==========') {
     app = docker.build("tanzu/${env.IMAGE_NAME}")
 }

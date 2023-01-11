@@ -24,4 +24,9 @@ public class RestTemplateTestController {
         System.out.println("client.taskoo.net/client로 api 요청을 보냈습니다.");
         return ResponseEntity.ok(restTemplateTestService.callPostExternalServer2());
     }
+    @RequestMapping("/rest/test3")
+    public ResponseEntity<?> restTemplateTest3() {
+        return ResponseEntity.ok(restTemplateTestService.callPostExternalServer3());
+    }
+
 }

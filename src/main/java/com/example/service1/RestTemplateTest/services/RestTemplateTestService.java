@@ -59,4 +59,14 @@ public class RestTemplateTestService {
 
 
 
+    public Response callPostExternalServer3() {
+        Person person = new Person();
+        person.setName("ted");
+        person.setAge(38);
+        person.addInfo("location", "역삼");
+
+        return apiService.post("https://postman-echo.com/post", HttpHeaders.EMPTY, person, Response.class).getBody();
+    }
+
+
 }

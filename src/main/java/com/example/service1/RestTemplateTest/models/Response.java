@@ -14,6 +14,11 @@ public class Response {
     private List<String> services = new ArrayList<String>();
     private Map<String, String> headers;
 
+    public Person getData() {
+        return data;
+    }
+
+
     public Map<String, String> getHeaders() {
         return headers;
     }

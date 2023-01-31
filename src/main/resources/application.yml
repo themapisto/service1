@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: service1
+  thymeleaf:
+    prefix : classpath:templates/
+    suffix : .html
+
+
 
 eureka:
   instance:

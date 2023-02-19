@@ -7,6 +7,22 @@ spring:
   thymeleaf:
     prefix : classpath:templates/
     suffix : .html
+  datasource:
+    url: jdbc:h2:mem:JPATest2
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true # H2 DB 웹콘솔 사용하도록 설정 (http://localhost:8080/h2-console)
+      settings:
+        web-allow-others: true
+  jpa:
+    database: H2
+    show-sql: false # Jpa 수행 시 SQL문 로그 출력
+    properties:
+      hibernate:
+        format_sql: true # 쿼리 출력시 포맷 정렬되도록 설정
 
 
 

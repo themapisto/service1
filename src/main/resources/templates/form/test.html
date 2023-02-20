@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link th:href="@{/css/bootstrap.min.css}"
+          href="../css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 560px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="py-5 text-center">
+        <h2>exercise 상세</h2>
+    </div>
+
+    <!-- 추가 -->
+    <h2 th:if="${param.status}" th:text="'저장 완료'"></h2>
+
+
+    <table class="tg">
+
+        <tr class="todo">
+            <td class="tg-pi2l" th:text="${member.id}">Day</td>
+            <td th:text="${member.exercise1}"></td>
+            <td th:text="${member.exercise2}"></td>
+            <td th:text="${member.exercise3}"></td>
+            <td th:text="${member.exercise4}"></td>
+            <td th:text="${member.exercise5}"></td>
+            <td th:text="${member.exercise6}"></td>
+        </tr>
+
+
+    </table>
+
+
+
+
+    <div class="col">
+        <button class="w-100 btn btn-secondary btn-lg"
+                onclick="location.href='exercises.html'"
+                th:onclick="|location.href='@{/form}'|"
+                type="button">목록으로</button>
+    </div>
+</div>
+
+</div> <!-- /container -->
+</body>
+</html>

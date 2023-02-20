@@ -2,7 +2,6 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.7.6'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
-    id "org.sonarqube" version "3.4.0.2513"
 
 }
 
@@ -26,10 +25,10 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 	implementation group: 'io.github.openfeign', name: 'feign-gson', version: '11.0'
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 	implementation "org.springframework.boot:spring-boot-starter-data-jpa"
 	implementation 'com.h2database:h2'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 }
 
 dependencyManagement {
@@ -42,14 +41,3 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-subprojects {
-	apply plugin: 'org.sonarqube'
-
-	sonarqube {
-		properties {
-			property 'sonar.host.url', 'http://54.238.193.86:5000'
-			property 'sonar.login', 'squ_892cd416be91411e1e25b99cf8d1f37ff33af727'
-			property 'sonar.projectKey', 'Koo'
-		}
-	}
-}

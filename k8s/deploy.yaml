@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: service1
-          image: harbor.aikoo.net/tanzu/service1:1.18
+          image: harbor.aikoo.net/tanzu/service1:1.19
           ports:
             - containerPort: 8015

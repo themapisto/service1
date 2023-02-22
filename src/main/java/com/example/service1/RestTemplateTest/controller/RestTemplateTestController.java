@@ -23,6 +23,7 @@ public class RestTemplateTestController {
     @RequestMapping("/rest/test2")
     public ResponseEntity<?> restTemplateTest2() throws JsonProcessingException {
         //client.taskoo.net 으로 /services 호출
+        System.out.println("client 호출할거야");
         return ResponseEntity.ok(restTemplateTestService.callPostExternalServer2());
     }
     @RequestMapping("/rest/test3")

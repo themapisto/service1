@@ -17,11 +17,12 @@ public class RestTemplateTestController {
 
     @RequestMapping("/rest/test1")
     public ResponseEntity<?> restTemplateTest1() {
+        //postman
         return ResponseEntity.ok(restTemplateTestService.callPostExternalServer());
     }
     @RequestMapping("/rest/test2")
     public ResponseEntity<?> restTemplateTest2() throws JsonProcessingException {
-        System.out.println("client.taskoo.net/client로 api 요청을 보냈습니다.");
+        //client.taskoo.net 으로 /services 호출
         return ResponseEntity.ok(restTemplateTestService.callPostExternalServer2());
     }
     @RequestMapping("/rest/test3")

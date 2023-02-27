@@ -22,7 +22,6 @@ public class DController {
     public List<String> services() throws JsonProcessingException {
 
         System.out.println("gateway가 나를 불렀어!!!");
-        testController.restTemplateTest2();
 
         return discoveryService.getServices();
     }

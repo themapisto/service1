@@ -33,7 +33,7 @@ spec:
                  {
                   [":method"] = "GET",
                   [":path"] = "/",
-                  [":authority"] = "internal.org.net"
+                  [":authority"] = "gateway.taskoo.net"
                  },
                 "authorize call",
                 5000)
@@ -58,5 +58,5 @@ spec:
                       address:
                         socket_address:
                           protocol: TCP
-                          address: "internal.org.net"
-                          port_value: 8888
+                          address: "gateway.taskoo.net"
+                          port_value: 80

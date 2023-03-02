@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: EnvoyFilter
 metadata:
   name: custom-protocol
-  namespace: istio-config # as defined in meshConfig resource.
+  namespace: springboot # as defined in meshConfig resource.
 spec:
   configPatches:
     - applyTo: NETWORK_FILTER

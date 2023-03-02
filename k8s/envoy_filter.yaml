@@ -13,7 +13,7 @@ spec:
       match:
         context: SIDECAR_INBOUND
         listener:
-          portNumber: 8080
+          portNumber: 8015
           filterChain:
             filter:
               name: "envoy.filters.network.http_connection_manager"

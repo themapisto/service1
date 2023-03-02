@@ -31,8 +31,8 @@ spec:
                 local headers, body = request_handle:httpCall(
                  "lua_cluster",
                  {
-                  [":method"] = "POST",
-                  [":path"] = "/acl",
+                  [":method"] = "GET",
+                  [":path"] = "/",
                   [":authority"] = "internal.org.net"
                  },
                 "authorize call",

@@ -8,10 +8,7 @@ RUN chmod +x ./gradlew
 RUN ./gradlew build -x test
 
 FROM openjdk:18-jdk-alpine AS layers
-RUN jlink --compress=2 --no-header-files --no-man-pages \
-           --strip-debug --add-modules $(jdeps --print-module-deps /app/build/libs/*.jar) \
-           --output /jlinked
-
+RUN jlink --compress=2 --no-header-files --no-man-pages --strip-debug --add-modules $(jdeps --print-module-deps /app/build/libs/*.jar) --output /jlinked
 
 FROM alpine:3.14
 RUN apk --no-cache add curl

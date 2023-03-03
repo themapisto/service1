@@ -1,4 +1,4 @@
-FROM openjdk:18-jdk-alpine AS builder
+FROM openjdk:11 AS builder
 COPY gradlew .
 COPY gradle gradle
 COPY build.gradle .

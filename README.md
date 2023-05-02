@@ -10,7 +10,7 @@
     - url : postman  
   
 - ("/rest/test2")
-    - url : client.taskoo.net/client
+    - url : matilda용 vRA
 
 ### Jenkinsfile, Dockerfile 
-- kubernetes 배포 로직 구축 예정
+- kubernetes 배포 로직

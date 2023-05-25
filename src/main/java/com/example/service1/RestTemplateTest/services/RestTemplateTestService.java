@@ -39,8 +39,8 @@ import static org.springframework.http.MediaType.APPLICATION_JSON;
 public class RestTemplateTestService {
 
     private ApiService<Response> apiService;
-    private String bearertoken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjI0NTA1OTA5MjU4Mjg3MDMwOTIifQ.eyJpc3MiOiJodHRwOi8vaWRlbnRpdHktc2VydmljZS5wcmVsdWRlLnN2Yy5jbHVzdGVyLmxvY2FsOjgwMDAiLCJpYXQiOjE2ODMxNTgwMzAsImV4cCI6MTY4MzE4NjgzMCwianRpIjoiMDIxYjlhNDUtODA2MC00OTA1LTk4MGEtNWE1Yjg3OTNhMWVmIiwiY29udGV4dCI6Ilt7XCJtdGRcIjpcInVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphYzpjbGFzc2VzOlBhc3N3b3JkUHJvdGVjdGVkVHJhbnNwb3J0XCIsXCJpYXRcIjoxNjgzMTU4MDMwLFwiaWRcIjoxNX1dIiwiYXpwIjoicHJlbHVkZS11c2VyLXk2ME9Nem9rbU8iLCJzdWIiOiJTeXN0ZW0gRG9tYWluOmFkZTViZTRkLWE4OTQtNDEyOS04YTNlLTllZTJiZTc1YzViMiIsImRvbWFpbiI6IlN5c3RlbSBEb21haW4iLCJ1c2VybmFtZSI6Im16YyIsInBlcm1zIjpbImNzcDpvcmdfb3duZXIiLCJleHRlcm5hbC85MDE1ZTdiYi05NzQ3LTQxNDgtYjM5Zi1jOTIwN2JhZjQxZjcvbWlncmF0aW9uOmFkbWluIiwiZXh0ZXJuYWwvN2ZmZjgzM2UtODBjZS00NTY4LTkwYTgtNDVkNzNkY2M0ZDdmL0NvZGVTdHJlYW06YWRtaW5pc3RyYXRvciIsImV4dGVybmFsLzRhY2NiZGVkLWVjYzMtNDRhMy04MjU2LWE2ZGU4YTFkOGVkZC9vcmNoZXN0cmF0aW9uOnZpZXdlciIsImV4dGVybmFsL2Y4OWMyNmQwLWRjZWQtNDBlOS1hYzRjLTYzZjBlOTFlY2U5My9zYWx0c3RhY2s6YWRtaW4iLCJleHRlcm5hbC80YWNjYmRlZC1lY2MzLTQ0YTMtODI1Ni1hNmRlOGExZDhlZGQvb3JjaGVzdHJhdGlvbjphZG1pbiIsImV4dGVybmFsLzdmZmY4MzNlLTgwY2UtNDU2OC05MGE4LTQ1ZDczZGNjNGQ3Zi9Db2RlU3RyZWFtOmRldmVsb3BlciIsImV4dGVybmFsLzkyZDI2NmZjLTkwODAtNDAzZS04ZmIyLWUxY2Q4OWE2OGQ2Zi9jYXRhbG9nOmFkbWluIiwiZXh0ZXJuYWwvNGFjY2JkZWQtZWNjMy00NGEzLTgyNTYtYTZkZThhMWQ4ZWRkL29yY2hlc3RyYXRpb246ZGVzaWduZXIiLCJleHRlcm5hbC85MDE1ZTdiYi05NzQ3LTQxNDgtYjM5Zi1jOTIwN2JhZjQxZjcvYXV0b21hdGlvbnNlcnZpY2U6Y2xvdWRfYWRtaW4iXSwiY29udGV4dF9uYW1lIjoiY2Y5ZWFjMzQtZjZlNi00Y2UxLWFjMGEtMGM4NWQyMTBkMjBjIiwiYWNjdCI6Im16YyJ9.c09vjTRYaoYMv-oXSbZDspOGR7KSltpeaj8nz_yW9FX5TCQQ_4xKNiKH4MTAysjgWWrRv3RtP-E5sOTH60HTOxnrDeUKb8NHX6gnVsgDNBmZqGo1SixbMob4Y6x10MEuLYCJV4tecqDZdZbEyzKQafO1tuMWLsEffQ-hQXxq0p4xkdHBySg7NcfMdfVIej8YGOMb2-E0xTAQvCDdHwn8hrsIaPtf0r3eICDvOB1DvK7NRoBxbvS2KK1eDk_q5ID0chYMuvFC9ei_euTuwIYH9Ap7UJNPifNEfOZIT1Zrh8VD692tTDWCPE3u3XKR81ct_ujnvF0Jj7iRt3YoGP0oMg";
-
+    private String bearertoken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjcyMTI2OTc5Mjk5MDc3Mjg5MzUifQ.eyJpc3MiOiJodHRwOi8vaWRlbnRpdHktc2VydmljZS5wcmVsdWRlLnN2Yy5jbHVzdGVyLmxvY2FsOjgwMDAiLCJpYXQiOjE2ODQ5OTI2NzAsImV4cCI6MTY4NTAyMTQ3MCwianRpIjoiZTgyOWM4NTktZTM4NS00ZTYzLWJlNGUtY2VjM2FmYjhlM2E2IiwiY29udGV4dCI6Ilt7XCJtdGRcIjpcInVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphYzpjbGFzc2VzOlBhc3N3b3JkUHJvdGVjdGVkVHJhbnNwb3J0XCIsXCJpYXRcIjoxNjg0OTkyNjcwLFwiaWRcIjoxNX1dIiwiYXpwIjoicHJlbHVkZS11c2VyLTdwVm52MHBVM1AiLCJzdWIiOiJTeXN0ZW0gRG9tYWluOjA3YjI4M2QwLTA4ODctNDEwNy05Y2M0LWJiZDkzMzYzOTU1ZCIsImRvbWFpbiI6IlN5c3RlbSBEb21haW4iLCJ1c2VybmFtZSI6Im16YyIsInBlcm1zIjpbImNzcDpvcmdfb3duZXIiLCJleHRlcm5hbC9hOWQxY2E0OC1hZDg3LTQyOTYtYmVlZS1kY2UzMDJiOGE3ZTYvQ29kZVN0cmVhbTphZG1pbmlzdHJhdG9yIiwiZXh0ZXJuYWwvNmYwMDRlOGQtZjQxNC00YjU5LWE1OTMtZDhkNGJmNzAwNTIwL29yY2hlc3RyYXRpb246ZGVzaWduZXIiLCJleHRlcm5hbC83OTNhMWJjZi04NGRjLTQwYmUtYWUwNi1mZmQ1N2Y1OTNiYWIvYXV0b21hdGlvbnNlcnZpY2U6Y2xvdWRfYWRtaW4iLCJleHRlcm5hbC82ZjAwNGU4ZC1mNDE0LTRiNTktYTU5My1kOGQ0YmY3MDA1MjAvb3JjaGVzdHJhdGlvbjp2aWV3ZXIiLCJleHRlcm5hbC9kMTE5YzUxZi1jZDFkLTRlZDEtYmY5Zi1jMGEzNzk5MDhkZTcvY2F0YWxvZzphZG1pbiIsImV4dGVybmFsL2E5ZDFjYTQ4LWFkODctNDI5Ni1iZWVlLWRjZTMwMmI4YTdlNi9Db2RlU3RyZWFtOmRldmVsb3BlciIsImV4dGVybmFsL2I1NDJhZDhjLWYyYzMtNGJkMi04MDdhLTQyNGIyMGJkMTliZS9zYWx0c3RhY2s6YWRtaW4iLCJleHRlcm5hbC83OTNhMWJjZi04NGRjLTQwYmUtYWUwNi1mZmQ1N2Y1OTNiYWIvbWlncmF0aW9uOmFkbWluIiwiZXh0ZXJuYWwvNmYwMDRlOGQtZjQxNC00YjU5LWE1OTMtZDhkNGJmNzAwNTIwL29yY2hlc3RyYXRpb246YWRtaW4iXSwiY29udGV4dF9uYW1lIjoiYmFlMjhmMjYtNGZmZS00OTE3LTlhNGEtZTAwYzVlNGU2Mjg0IiwiYWNjdCI6Im16YyJ9.kVjMZvLjGYDpg6k3h9Qo62kx_B0jvM_ubV8lmg3KdgQTTpmYjgLuTDFFQHWGloV0O4RS5ZjPR8u0qkL3Zpfc89fR4ExnDosEudJnuNia5U_k6-db__nxKjRgEkA81qksxrqY7OtKuLdGLBQRcKSasuzAsanzjMTTNKJqWfg61-Rvygiqt4n-Hepj4Rl57fQBfKewmIuM-moGgLk4yf4922rXoa0QguXlw1faxqe1rjxfdheTGwoC_bZyh1-ypsiveemXp5VC4iDaqm1aMZADctE3v3eWre9HAPFNokkTxPRYhq3HNLyb2oIxCdXILl-mnNfjJtFviSkI9J4OAEOLqA";
+    // private String url = "https://vra-cmp.matilda-mzc.com/csp/gateway/am/api/login?access_token";
     @Autowired
     public RestTemplateTestService(ApiService<Response> apiService) {
         this.apiService = apiService;
@@ -86,7 +86,7 @@ public class RestTemplateTestService {
 
         HttpEntity<?> entity = new HttpEntity<String> (jsonObject.toString(), header);
 
-        ResponseEntity<?> resultMap = restTemplate.exchange("https://matildavra.matilda.local/csp/gateway/am/api/login?access_token", HttpMethod.POST,entity , Object.class);
+        ResponseEntity<?> resultMap = restTemplate.exchange("https://vra-cmp.matilda-mzc.com/csp/gateway/am/api/login?access_token", HttpMethod.POST,entity , Object.class);
 
         result.put("statusCode", resultMap.getStatusCodeValue()); //http status code를 확인
         result.put("header", resultMap.getHeaders()); //헤더 정보 확인
@@ -122,13 +122,13 @@ public class RestTemplateTestService {
         //
         // create param
         JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("refreshToken","cgIgMN1dyJbstUkE0C94UT8QT6PJuT7g");
+        jsonObject.addProperty("refreshToken","G7oD3ut8nLcjqMgxBildbUJP8NRD1imT");
         //jsonObject.addProperty("password","xptmxm5");
 
 
         HttpEntity<?> entity = new HttpEntity<String> (jsonObject.toString(), header);
 
-        ResponseEntity<?> resultMap = restTemplate.exchange("https://matildavra.matilda.local/iaas/api/login", HttpMethod.POST,entity , Object.class);
+        ResponseEntity<?> resultMap = restTemplate.exchange("https://vra-cmp.matilda-mzc.com/iaas/api/login", HttpMethod.POST,entity , Object.class);
 
         result.put("statusCode", resultMap.getStatusCodeValue()); //http status code를 확인
         result.put("header", resultMap.getHeaders()); //헤더 정보 확인
@@ -167,7 +167,7 @@ public class RestTemplateTestService {
 
         HttpEntity<?> entity = new HttpEntity<String> (jsonObject.toString(), header);
 
-        ResponseEntity<?> resultMap = restTemplate.exchange("https://matildavra.matilda.local/deployment/api/deployments", HttpMethod.GET,entity , Object.class);
+        ResponseEntity<?> resultMap = restTemplate.exchange("https://vra-cmp.matilda-mzc.com/deployment/api/deployments", HttpMethod.GET,entity , Object.class);
 
         result.put("statusCode", resultMap.getStatusCodeValue()); //http status code를 확인
         result.put("header", resultMap.getHeaders()); //헤더 정보 확인
@@ -225,7 +225,7 @@ public class RestTemplateTestService {
 
         HttpEntity<?> entity = new HttpEntity<String> (jsonObject.toString(), header);
 
-        ResponseEntity<?> resultMap = restTemplate.exchange("https://matildavra.matilda.local/blueprint/api/blueprint-requests", HttpMethod.POST,entity , Object.class);
+        ResponseEntity<?> resultMap = restTemplate.exchange("https://vra-cmp.matilda-mzc.com/blueprint/api/blueprint-requests", HttpMethod.POST,entity , Object.class);
 
         result.put("statusCode", resultMap.getStatusCodeValue()); //http status code를 확인
         result.put("header", resultMap.getHeaders()); //헤더 정보 확인
@@ -289,7 +289,7 @@ public class RestTemplateTestService {
 
         HttpEntity<?> entity = new HttpEntity<String> (json.toString(), header);
 
-        ResponseEntity<?> resultMap = restTemplate.exchange("https://matildavra.matilda.local/vco/api/actions/beddd12a-bc15-4e13-9534-18b5d6218acd/executions", HttpMethod.POST,entity , Object.class);
+        ResponseEntity<?> resultMap = restTemplate.exchange("https://vra-cmp.matilda-mzc.com/vco/api/actions/beddd12a-bc15-4e13-9534-18b5d6218acd/executions", HttpMethod.POST,entity , Object.class);
 
         result.put("statusCode", resultMap.getStatusCodeValue()); //http status code를 확인
         result.put("header", resultMap.getHeaders()); //헤더 정보 확인

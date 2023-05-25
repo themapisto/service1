@@ -1,0 +1,130 @@
+{
+  "content": [
+    {
+      "id": "4b607cef-cb85-4c64-a748-fbef7b1ec726",
+      "name": "NETWORK NAME TEST01",
+      "description": "",
+      "orgId": "bae28f26-4ffe-4917-9a4a-e00c5e4e6284",
+      "blueprintId": "9d11e4e6-2335-428e-8970-4bd0ee1af8e1",
+      "createdAt": "2023-05-25T03:01:43.201663Z",
+      "createdBy": "mzc",
+      "ownedBy": "mzc",
+      "ownerType": "USER",
+      "lastUpdatedAt": "2023-05-25T03:04:43.107571Z",
+      "lastUpdatedBy": "mzc",
+      "inputs": {
+        "name": "VM02",
+        "image": "vmw_ubuntu",
+        "flavor": "small",
+        "address": "10.20.4.196"
+      },
+      "projectId": "d0b7b8d0-94f7-4d15-8078-3ef076ad6220",
+      "status": "CREATE_SUCCESSFUL"
+    },
+    {
+      "id": "b534f000-a2df-479a-8c8b-ad2e4699ef7d",
+      "name": "VMNAMETEST03",
+      "description": "",
+      "orgId": "bae28f26-4ffe-4917-9a4a-e00c5e4e6284",
+      "blueprintId": "9d11e4e6-2335-428e-8970-4bd0ee1af8e1",
+      "createdAt": "2023-05-25T02:50:49.664552Z",
+      "createdBy": "mzc",
+      "ownedBy": "mzc",
+      "ownerType": "USER",
+      "lastUpdatedAt": "2023-05-25T02:53:40.749977Z",
+      "lastUpdatedBy": "mzc",
+      "inputs": {
+        "name": "VM01",
+        "image": "vmw_ubuntu",
+        "flavor": "small",
+        "address": "10.20.4.197"
+      },
+      "projectId": "d0b7b8d0-94f7-4d15-8078-3ef076ad6220",
+      "status": "CREATE_SUCCESSFUL"
+    },
+    {
+      "id": "a381cb60-2c83-49e2-b399-d43e64a2b199",
+      "name": "aws-vm-test20",
+      "description": "",
+      "orgId": "bae28f26-4ffe-4917-9a4a-e00c5e4e6284",
+      "blueprintId": "0ac33e04-6a5f-4fd5-b8af-9c19e271c75e",
+      "createdAt": "2023-05-24T09:04:50.419756Z",
+      "createdBy": "mzc",
+      "ownedBy": "mzc",
+      "ownerType": "USER",
+      "lastUpdatedAt": "2023-05-24T09:06:06.158805Z",
+      "lastUpdatedBy": "mzc",
+      "inputs": {},
+      "projectId": "54d365d4-94b3-4027-a856-b6ae0fd0ac5c",
+      "status": "CREATE_SUCCESSFUL"
+    },
+    {
+      "id": "9b0edfd3-9945-4006-af68-1cb504f6844c",
+      "name": "vmtest",
+      "description": "",
+      "orgId": "bae28f26-4ffe-4917-9a4a-e00c5e4e6284",
+      "blueprintId": "9d11e4e6-2335-428e-8970-4bd0ee1af8e1",
+      "createdAt": "2023-05-24T08:57:08.988471Z",
+      "createdBy": "mzc",
+      "ownedBy": "mzc",
+      "ownerType": "USER",
+      "lastUpdatedAt": "2023-05-24T09:00:03.277310Z",
+      "lastUpdatedBy": "mzc",
+      "inputs": {
+        "name": "kooDevice03",
+        "image": "vmw_ubuntu",
+        "flavor": "small",
+        "address": "10.20.4.15"
+      },
+      "projectId": "d0b7b8d0-94f7-4d15-8078-3ef076ad6220",
+      "status": "CREATE_SUCCESSFUL"
+    }
+  ],
+  "pageable": {
+    "offset": 0,
+    "sort": {
+      "unsorted": false,
+      "sorted": true,
+      "empty": false
+    },
+    "queryInfo": {
+      "orderBy": [
+        {
+          "expression": {
+            "propertyName": "createdAt"
+          },
+          "direction": "DESCENDING"
+        }
+      ],
+      "customOptions": {},
+      "expand": [],
+      "select": [],
+      "rawOrderBy": "createdAt desc",
+      "properties": [
+        "createdAt"
+      ],
+      "sort": {
+        "unsorted": false,
+        "sorted": true,
+        "empty": false
+      }
+    },
+    "pageNumber": 0,
+    "pageSize": 20,
+    "paged": true,
+    "unpaged": false
+  },
+  "last": true,
+  "totalPages": 1,
+  "totalElements": 4,
+  "sort": {
+    "unsorted": false,
+    "sorted": true,
+    "empty": false
+  },
+  "first": true,
+  "number": 0,
+  "numberOfElements": 4,
+  "size": 20,
+  "empty": false
+}

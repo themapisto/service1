@@ -52,6 +52,13 @@ public class RestTemplateTestController {
         return ResponseEntity.ok(restTemplateTestService.callPostExternalServer5());
     }
 
+    @RequestMapping("/rest/test6")
+    public ResponseEntity<?> restTemplateTest6() throws JsonProcessingException, KeyStoreException, NoSuchAlgorithmException, KeyManagementException {
+        //client.taskoo.net 으로 /services 호출
+        System.out.println("action 실행하기");
+        return ResponseEntity.ok(restTemplateTestService.callPostExternalServer6());
+    }
+
 
 
 }

@@ -5,18 +5,33 @@
     <title>Make it for me</title>
 </head>
 <body>
-<button onclick="makeIt1()">Refresh Token 만들어줘</button>
-<button onclick="makeIt2()">Access Token 만들어줘</button>
+
+<div>
+    <h2> vRA </h2>
+</div>
+
+
+<div>
 <button onclick="makeIt3()">Deployment 가져와</button>
 <button onclick="makeIt4()">Blueprint 가져와</button>
 <button onclick="makeIt5()">Deployment 만들어줘 </button>
+</div>
+
+<div>
+    <h2> vRO</h2>
+</div>
+
+
+<div>
+    <button onclick="makeIt6()">Action 실행해줘</button>
+</div>
+
+
+
+
+
 <script>
-    function makeIt1() {
-        window.location.href = "http://localhost:8015/rest/test2";
-    }
-    function makeIt2() {
-        window.location.href = "http://localhost:8015/rest/test3";
-    }
+
     function makeIt3() {
         window.location.href = "http://localhost:8015/rest/test4";
     }
@@ -25,6 +40,9 @@
     }
     function makeIt5() {
         window.location.href = "http://localhost:8015/rest/test5";
+    }
+    function makeIt6() {
+        window.location.href = "http://localhost:8015/rest/test6";
     }
 
 

@@ -12,8 +12,8 @@
 
 
 <div>
-<button onclick="makeIt3()">Deployment 가져와</button>
-<button onclick="makeIt5()">Deployment 만들어줘 </button>
+<button onclick="makeIt1()">Deployment 가져와</button>
+<button onclick="makeIt2()">Deployment 만들어줘 </button>
 </div>
 
 <div>
@@ -22,7 +22,7 @@
 
 
 <div>
-    <button onclick="makeIt6()">Action 실행해줘</button>
+    <button onclick="makeIt3()">Action 실행해줘</button>
 </div>
 
 
@@ -31,17 +31,14 @@
 
 <script>
 
+    function makeIt1() {
+        window.location.href = "http://service1.taskoo.net/rest/test4";
+    }
+    function makeIt2() {
+        window.location.href = "http://service1.taskoo.net/rest/test5";
+    }
     function makeIt3() {
-        window.location.href = "http://localhost:8015/rest/test4";
-    }
-    function makeIt4() {
-        window.location.href = "http://localhost:8015/rest/test1";
-    }
-    function makeIt5() {
-        window.location.href = "http://localhost:8015/rest/test5";
-    }
-    function makeIt6() {
-        window.location.href = "http://localhost:8015/rest/test6";
+        window.location.href = "http://service1.taskoo.net/rest/test6";
     }
 
 

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.net.URI;
 import java.util.Currency;
 
-@FeignClient(name = "SERVICE1")
+@FeignClient(name = "SERVICE31")
 public interface ExampleClient {
     @GetMapping("/form/{id}")
     String getUserById(@PathVariable("id") Long id);

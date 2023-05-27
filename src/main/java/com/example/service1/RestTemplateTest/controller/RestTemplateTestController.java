@@ -3,18 +3,24 @@ package com.example.service1.RestTemplateTest.controller;
 import com.example.service1.RestTemplateTest.services.RestTemplateTestService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.URI;
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 
 
 @RestController
 public class RestTemplateTestController {
     private RestTemplateTestService restTemplateTestService;
+
+
     @Autowired
     public RestTemplateTestController(RestTemplateTestService restTemplateTestService) {
         this.restTemplateTestService =restTemplateTestService;
@@ -23,6 +29,7 @@ public class RestTemplateTestController {
     @RequestMapping("/rest/test1")
     public ResponseEntity<?> restTemplateTest1() {
         //postman
+
         return ResponseEntity.ok(restTemplateTestService.callPostExternalServer());
     }
     @RequestMapping("/rest/test2")

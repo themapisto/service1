@@ -16,6 +16,8 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.ssl.SSLContexts;
 import org.apache.http.ssl.TrustStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -25,12 +27,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import javax.net.ssl.SSLContext;
+import java.net.URI;
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.X509Certificate;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Random;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON;
@@ -46,6 +50,16 @@ public class RestTemplateTestService {
     public RestTemplateTestService(ApiService<Response> apiService) {
         this.apiService = apiService;
     }
+    @Autowired
+    private DiscoveryClient discoveryClient;
+    public URI serviceUrl() {
+        List<ServiceInstance> list = (List<ServiceInstance>) discoveryClient.getInstances("SERVICE1");
+        if (list != null && list.size() > 0 ) {
+            return list.get(0).getUri();
+        }
+        return null;
+    }
+
 
     public Response callPostExternalServer() {
         Person person = new Person();
@@ -56,6 +70,8 @@ public class RestTemplateTestService {
         person.addInfo("updatedBy", "mzc");
         person.addInfo("projectName", "Sample-Project");
 
+        String koo = discoveryClient.getInstances("SERVICE1").toString();
+        System.out.println("koo = " + koo);
 
 
         return apiService.post("https://postman-echo.com/post", HttpHeaders.EMPTY, person, Response.class).getBody();

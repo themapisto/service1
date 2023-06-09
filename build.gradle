@@ -8,7 +8,6 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
@@ -31,7 +30,8 @@ dependencies {
 	implementation 'com.h2database:h2'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310"'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+
 }
 
 bootJar {
@@ -58,13 +58,19 @@ tasks.named('test') {
 
 jib {
 	from {
-		image = "adoptopenjdk/openjdk16:x86_64-alpine-jdk-16.0.1_9"
+		image = "openjdk:17-jdk-alpine"
 	}
 	to {
 		image = "koomzc/service1-jib"
 		tags = ["latest"]
 	}
 	container {
-		jvmFlags = ["-Xms128m", "-Xmx128m"]
+		mainClass='com.browndwarf.dockerwebservice.DockerwebserviceApplication'
+		creationTime='USE_CURRENT_TIMESTAMP'
+		environment=[USE_PROFILE:'default', NORMAL_PROP:'NORMAL', DIRECT_MSG:'Hello!']
+		format='OCI'
+		volumes=['/var/tmp']
+		entrypoint=['java', '-Dspring.profiles.active=${USE_PROFILE}', '-Dnormal.prop=${NORM_PROP}', '-Dconfig.healthmsg=${DIRECT_MSG}', '-cp',  '/app/resources:/app/classes:/app/libs/*', 'com.browndwarf.dockerwebservice.DockerwebserviceApplication']
 	}
+
 }

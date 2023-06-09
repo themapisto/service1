@@ -60,7 +60,7 @@ jib {
 		image = "adoptopenjdk/openjdk16:x86_64-alpine-jdk-16.0.1_9"
 	}
 	to {
-		image = "test1099/hello-jib"
+		image = "koomzc/service1-jib"
 		tags = ["latest"]
 	}
 	container {

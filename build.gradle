@@ -2,7 +2,6 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.7.6'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
-	id 'com.google.cloud.tools.jib' version '2.4.0'
 
 }
 
@@ -30,7 +29,6 @@ dependencies {
 	implementation 'com.h2database:h2'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
 
 }
 

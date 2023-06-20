@@ -55,22 +55,3 @@ dependencyManagement {
 tasks.named('test') {
 	useJUnitPlatform()
 }
-
-jib {
-	from {
-		image = "openjdk:17-jdk-alpine"
-	}
-	to {
-		image = "koomzc/service1-jib"
-		tags = ["latest"]
-	}
-	container {
-		mainClass='com.browndwarf.dockerwebservice.DockerwebserviceApplication'
-		creationTime='USE_CURRENT_TIMESTAMP'
-		environment=[USE_PROFILE:'default', NORMAL_PROP:'NORMAL', DIRECT_MSG:'Hello!']
-		format='OCI'
-		volumes=['/var/tmp']
-		entrypoint=['java', '-Dspring.profiles.active=${USE_PROFILE}', '-Dnormal.prop=${NORM_PROP}', '-Dconfig.healthmsg=${DIRECT_MSG}', '-cp',  '/app/resources:/app/classes:/app/libs/*', 'com.browndwarf.dockerwebservice.DockerwebserviceApplication']
-	}
-
-}
